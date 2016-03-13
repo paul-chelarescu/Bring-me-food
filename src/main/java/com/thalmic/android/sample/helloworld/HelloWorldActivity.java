@@ -72,6 +72,13 @@ public class HelloWorldActivity extends Activity {
             // Set the text color of the text view to cyan when a Myo connects.
             mTextView.setTextColor(Color.CYAN);
             globalTimeStamp = timestamp;
+            //Make middle text invisible at first
+            tableNumber.setVisibility(View.INVISIBLE);
+            setTableNumber.setVisibility(View.INVISIBLE);
+            String tableNumberString = "Table number " + tableNumberInt;
+            tableNumberTitle.setText(tableNumberString);
+            tableNumberTitle.setVisibility(View.VISIBLE);
+
         }
 
         // onDisconnect() is called whenever a Myo has been disconnected.
@@ -368,38 +375,38 @@ public class HelloWorldActivity extends Activity {
 //    }
 
 
-    private InputStream openHttpConnection(String urlStr) {
-        InputStream in = null;
-        int resCode = -1;
-
-        try {
-            URL url = new URL(urlStr);
-            URLConnection urlConn = url.openConnection();
-
-            if (!(urlConn instanceof HttpURLConnection)) {
-                throw new IOException("URL is not an Http URL");
-            }
-            HttpURLConnection httpConn = (HttpURLConnection) urlConn;
-            httpConn.setAllowUserInteraction(false);
-            httpConn.setInstanceFollowRedirects(true);
-            httpConn.setRequestMethod("GET");
-            httpConn.connect();
-            resCode = httpConn.getResponseCode();
-
-            if (resCode == HttpURLConnection.HTTP_OK) {
-                in = httpConn.getInputStream();
-            }
-        }
-
-        catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        return in;
-    }
+//    private InputStream openHttpConnection(String urlStr) {
+//        InputStream in = null;
+//        int resCode = -1;
+//
+//        try {
+//            URL url = new URL(urlStr);
+//            URLConnection urlConn = url.openConnection();
+//
+//            if (!(urlConn instanceof HttpURLConnection)) {
+//                throw new IOException("URL is not an Http URL");
+//            }
+//            HttpURLConnection httpConn = (HttpURLConnection) urlConn;
+//            httpConn.setAllowUserInteraction(false);
+//            httpConn.setInstanceFollowRedirects(true);
+//            httpConn.setRequestMethod("GET");
+//            httpConn.connect();
+//            resCode = httpConn.getResponseCode();
+//
+//            if (resCode == HttpURLConnection.HTTP_OK) {
+//                in = httpConn.getInputStream();
+//            }
+//        }
+//
+//        catch (MalformedURLException e) {
+//            e.printStackTrace();
+//        }
+//
+//        catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return in;
+//    }
 
 //    // HTTP GET request
 //    private void sendGet() throws Exception {
@@ -418,6 +425,7 @@ public class HelloWorldActivity extends Activity {
     EditText tableNumber;
     Button setTableNumber;
     int tableNumberInt = 0;
+    TextView tableNumberTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -429,6 +437,9 @@ public class HelloWorldActivity extends Activity {
 
         tableNumber = (EditText) findViewById(R.id.tableNumber);
         setTableNumber = (Button) findViewById(R.id.button);
+        tableNumberTitle = (TextView) findViewById(R.id.tableText);
+        tableNumberTitle.setVisibility(View.INVISIBLE);
+
         setTableNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -443,6 +454,7 @@ public class HelloWorldActivity extends Activity {
                 }
             }
         });
+
 
         // First, we initialize the Hub singleton with an application identifier.
         Hub hub = Hub.getInstance();

@@ -20,6 +20,7 @@
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/label_on_screen"
@@ -36,8 +37,6 @@
         android:id="@+id/tableNumber"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button"
-        android:layout_below="@+id/textView1"
         android:layout_marginTop="61dp"
         android:ems="10"
         android:hint="@string/enter_text"
@@ -45,12 +44,24 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="113dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="130dp"
-        android:text="@string/submit_table_number" />
+
+        android:layout_below="@+id/text"
+        android:layout_marginTop="180dp"
+        android:text="@string/submit_table_number"
+        android:layout_gravity="center_horizontal|top" />
+
+    <TextView
+        android:id="@+id/tableText"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:text="@string/tableTextLabel"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:editable="false" />
 
 </FrameLayout>
 <!-- From: file:/C:/Users/Ultrabook/Downloads/myo-android-sdk-0.10.0/myo-android-sdk-0.10.0/samples/HelloWorld/src/main/res/layout/activity_hello_world.xml -->

@@ -39,8 +39,8 @@ public final class R {
         public static final int myosdk__required_firmware_version_text=0x7f090007;
         public static final int myosdk__scan_result_view=0x7f09000a;
         public static final int tableNumber=0x7f090003;
+        public static final int tableText=0x7f090005;
         public static final int text=0x7f090002;
-        public static final int textView1=0x7f090005;
     }
     public static final class layout {
         public static final int activity_hello_world=0x7f030000;
@@ -73,7 +73,8 @@ public final class R {
         public static final int pose_waveout=0x7f070011;
         public static final int scan=0x7f070012;
         public static final int submit_table_number=0x7f070013;
-        public static final int unlocked=0x7f070014;
+        public static final int tableTextLabel=0x7f070014;
+        public static final int unlocked=0x7f070015;
     }
     public static final class style {
         public static final int myosdk__PopupActivityTheme=0x7f050001;

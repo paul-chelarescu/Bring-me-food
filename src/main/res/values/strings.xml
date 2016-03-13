@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Bring me food</string>
-    <string name="label_on_screen">Fist for drink\nWave-in for food</string>
+    <string name="label_on_screen"></string>
     <string name="scan">Scan</string>
     <string name="pose_fist">Drink</string>
     <string name="pose_wavein">Food</string>
@@ -14,7 +14,8 @@
     <string name="unlocked">Unlocked</string>
     <string name="locked">Locked</string>
     <string name="action_settings">Settings</string>
-    <string name="enter_text">What is you table number</string>
-    <string name="submit_table_number">That is !</string>
+    <string name="enter_text">What is you table number ?</string>
+    <string name="submit_table_number">Submit</string>
+    <string name="tableTextLabel">Table number </string>
 
 </resources>

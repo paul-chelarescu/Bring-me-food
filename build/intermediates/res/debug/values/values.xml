@@ -16,8 +16,8 @@
     <string name="app_name">Bring me food</string>
     <string name="arm_left">Make a choice</string>
     <string name="arm_right">Make a choice</string>
-    <string name="enter_text">What is you table number</string>
-    <string name="label_on_screen">Fist for drink\nWave-in for food</string>
+    <string name="enter_text">What is you table number ?</string>
+    <string name="label_on_screen"/>
     <string name="locked">Locked</string>
     <!-- From: file:/C:/Users/Ultrabook/Downloads/myo-android-sdk-0.10.0/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/res/values/values.xml -->
     <eat-comment/>
@@ -35,7 +35,8 @@
     <string name="pose_wavein">Food</string>
     <string name="pose_waveout">Make a choice</string>
     <string name="scan">Scan</string>
-    <string name="submit_table_number">That is !</string>
+    <string name="submit_table_number">Submit</string>
+    <string name="tableTextLabel">Table number </string>
     <string name="unlocked">Unlocked</string>
     <!-- From: file:/C:/Users/Ultrabook/Downloads/myo-android-sdk-0.10.0/myo-android-sdk-0.10.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/res/values/values.xml -->
     <eat-comment/>
