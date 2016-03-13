@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Ultrabook\\Downloads\\myo-android-sdk-0.10.0\\myo-android-sdk-0.10.0\\samples\\HelloWorld\\build\\intermediates\\res\\merged\\debug\\drawable\\myosdk__connected_dot.xml",
+        "source": "C:\\Users\\Ultrabook\\Downloads\\myo-android-sdk-0.10.0\\myo-android-sdk-0.10.0\\samples\\HelloWorld\\build\\intermediates\\exploded-aar\\com.thalmic\\myosdk\\0.10.0\\res\\drawable\\myosdk__connected_dot.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ultrabook\\Downloads\\myo-android-sdk-0.10.0\\myo-android-sdk-0.10.0\\samples\\HelloWorld\\build\\intermediates\\res\\merged\\debug\\drawable\\myosdk__firmware_incompatible_dot.xml",
+        "source": "C:\\Users\\Ultrabook\\Downloads\\myo-android-sdk-0.10.0\\myo-android-sdk-0.10.0\\samples\\HelloWorld\\build\\intermediates\\exploded-aar\\com.thalmic\\myosdk\\0.10.0\\res\\drawable\\myosdk__firmware_incompatible_dot.xml"
+    }
+]
