@@ -7,7 +7,6 @@ package com.thalmic.android.sample.helloworld;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,30 +28,6 @@ import com.thalmic.myo.Pose;
 import com.thalmic.myo.Quaternion;
 import com.thalmic.myo.XDirection;
 import com.thalmic.myo.scanner.ScanActivity;
-
-
-//import com.loopj.android.http.AsyncHttpClient;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.StatusLine;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-
 
 public class HelloWorldActivity extends Activity {
 
@@ -173,147 +148,6 @@ public class HelloWorldActivity extends Activity {
                         new RequestTask().execute("http://ec2-52-17-109-1.eu-west-1.compute." +
                                 "amazonaws.com:3000/api/add/" + tableNumberInt + "/drink");
                     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//                    HttpClient httpclient = new DefaultHttpClient();
-//
-//                    StatusLine statusLine = response.getStatusLine();
-//                    if(statusLine.getStatusCode() == HttpStatus.SC_OK){
-//                        ByteArrayOutputStream out = new ByteArrayOutputStream();
-//                        try {
-//
-//                            HttpResponse response = httpclient.execute(new HttpGet("http://ec2-52-17-109-1.eu-west-1.compute." +
-//                                    "amazonaws.com:3000/api/add/111/drink"));
-//                            response.getEntity().writeTo(out);
-//                            out.close();
-//                        }
-//                        catch (Exception e) {
-//                            System.out.println("We screwed up\n" + e);
-//                        }
-//                        String responseString = out.toString();
-//                        //..more logic
-//                    } else{
-//                        //Closes the connection.
-//                        response.getEntity().getContent().close();
-//                        throw new IOException(statusLine.getReasonPhrase());
-//                    }
-
-
-//                    connectNode("http://ec2-52-17-109-1.eu-west-1.compute." +
-//                            "amazonaws.com:3000/api/add/111/drink");
-
-
-
-
-
-
-//                    new ConnectServer().execute("http://ec2-52-17-109-1.eu-west-1.compute." +
-//                            "amazonaws.com:3000/api/add/111/drink");
-
-
-
-
-
-
-
-
-
-//                    Thread thread = new Thread(new Runnable(){
-//                        @Override
-//                        public void run() {
-//                            try {
-//                                URL myURL = new URL("http://ec2-52-17-109-1.eu-west-1.compute." +
-//                                        "amazonaws.com:3000/api/add/111/drink");
-//                                URLConnection myURLConnection = myURL.openConnection();
-//                                myURLConnection.connect();
-//                            }
-//                            catch (Exception e) {
-//                                System.out.println("We screwed up\n" + e);
-//                            }
-//                        }
-//                    });
-//
-//                    thread.start();
-
-
-
-
-
-
-
-//                    try {
-//                        URL url = new URL("http://ec2-52-17-109-1.eu-west-1.compute." +
-//                            "amazonaws.com:3000/api/add/9003/drink");
-//                        BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
-//                        String strTemp = "";
-//                        while (null != (strTemp = br.readLine())) {
-//                            System.out.println(strTemp);
-//                        }
-//                    } catch (Exception ex) {
-//                        ex.printStackTrace();
-//                    }
-
-                    //Magic happens
-//
-////                    String url = "http://www.google.com/search?q=mkyong";
-//                    String url = "http://ec2-52-17-109-1.eu-west-1.compute." +
-//                            "amazonaws.com:3000/api/add/9003/drink";
-//                    try {
-//                        URL urlNode = new URL(url);
-//                        HttpURLConnection connectionNode = (HttpURLConnection) urlNode.openConnection();
-//
-//                        // optional default is GET
-//                        connectionNode.setRequestMethod("GET");
-//                    }
-//                    catch (Exception e) {
-//                        Toast msg3 = Toast.makeText(getBaseContext(), "Connection didn't work",
-//                                Toast.LENGTH_SHORT);
-//                        msg3.show();
-//                    }
-
-                    //add request header
-//                    connectionNode.setRequestProperty("User-Agent", USER_AGENT);
-
-//                    int responseCode = connectionNode.getResponseCode();
-//                    System.out.println("\nSending 'GET' request to URL : " + url);
-//                    System.out.println("Response Code : " + responseCode);
-
-//                    BufferedReader in = new BufferedReader(
-//                            new InputStreamReader(connectionNode.getInputStream()));
-//                    String inputLine;
-//                    StringBuffer response = new StringBuffer();
-//
-//                    while ((inputLine = in.readLine()) != null) {
-//                        response.append(inputLine);
-//                    }
-//                    in.close();
-
-//                    //print result
-//                    System.out.println(response.toString());
                     break;
                 case WAVE_IN:
                     mTextView.setText(getString(R.string.pose_wavein));
@@ -352,75 +186,6 @@ public class HelloWorldActivity extends Activity {
         }
     };
 
-//    private void connectNode(String urlStr) {
-//        final String url = urlStr;
-//
-//        new Thread() {
-//            public void run() {
-//                try {
-//                    openHttpConnection(url);
-//                    bitmap = BitmapFactory.decodeStream(in);
-//                    Bundle b = new Bundle();
-//                    b.putParcelable("bitmap", bitmap);
-//                    msg.setData(b);
-//                    in.close();
-//                }
-//
-//                catch (IOException e1) {
-//                    e1.printStackTrace();
-//                }
-//                messageHandler.sendMessage(msg);
-//            }
-//        }.start();
-//    }
-
-
-//    private InputStream openHttpConnection(String urlStr) {
-//        InputStream in = null;
-//        int resCode = -1;
-//
-//        try {
-//            URL url = new URL(urlStr);
-//            URLConnection urlConn = url.openConnection();
-//
-//            if (!(urlConn instanceof HttpURLConnection)) {
-//                throw new IOException("URL is not an Http URL");
-//            }
-//            HttpURLConnection httpConn = (HttpURLConnection) urlConn;
-//            httpConn.setAllowUserInteraction(false);
-//            httpConn.setInstanceFollowRedirects(true);
-//            httpConn.setRequestMethod("GET");
-//            httpConn.connect();
-//            resCode = httpConn.getResponseCode();
-//
-//            if (resCode == HttpURLConnection.HTTP_OK) {
-//                in = httpConn.getInputStream();
-//            }
-//        }
-//
-//        catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-//
-//        catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return in;
-//    }
-
-//    // HTTP GET request
-//    private void sendGet() throws Exception {
-//
-//        String url = "http://ec2-52-17-109-1.eu-west-1.compute." +
-//                "amazonaws.com:3000/api/add/9003/drink";
-//
-//        URL obj = new URL(url);
-//        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-//
-//        // optional default is GET
-//        con.setRequestMethod("GET");
-//
-//    }
 
     EditText tableNumber;
     Button setTableNumber;

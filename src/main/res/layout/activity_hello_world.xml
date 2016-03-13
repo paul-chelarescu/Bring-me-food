@@ -28,11 +28,6 @@
         tools:ignore="SpUsage"
         android:editable="false" />
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Hello World!" />-->
-
     <EditText
         android:id="@+id/tableNumber"
         android:layout_width="fill_parent"
